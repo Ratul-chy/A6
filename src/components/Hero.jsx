@@ -1,38 +1,33 @@
 import React from 'react';
-
+import banner from '../assets/banner.png';
 const Hero = () => {
 
-    const handleExplore = () => {
-    console.log("Explore clicked");
-  };
-
-  const handleDemo = () => {
-    console.log("Watch demo clicked");
-  };
-
   return (
-    <div className="grid md:grid-cols-2 gap-10 px-8 py-16">
-      <div>
-        <h1 className="text-4xl font-bold">
-          Supercharge Your Digital Workflow
-        </h1>
-        <p className="mt-4 text-gray-500">
-          Access premium AI tools, templates, and assets.
-        </p>
+        <div className='max-w-[1600px] mx-auto gap-5 flex flex-col-reverse lg:flex-row justify-around items-center my-10'>
+            <div className='max-w-[600px] p-2 text-center lg:text-left space-y-3 mx-auto'>
+                <span className='flex items-center gap-2 p-2 rounded-2xl  bg-[#E1E7FF] w-fit mx-auto lg:mx-0'>
+                    <img src=  ""alt="" />
+                    <span className='bg-linear-to-r from-blue-600 to bg-purple-500 bg-clip-text text-transparent font-bold'> New: AI-Powered Tools Available</span>
+                </span>
+                <h1 className='text-5xl font-bold'>Supercharge YourDigital Workflow</h1>
+                <p className='text-gray-500'>Access premium AI tools, design assets, templates, and productivity
+                    software—all in one place. Start creating faster today.
 
-        <div className="mt-6 flex gap-4">
-          <button className="bg-purple-600 text-white px-5 py-2 rounded-full" onClick={handleExplore}>
-            Explore Products
-          </button>
-          <button className="border border-purple-600 text-purple-600 px-5 py-2 rounded-full" onClick={handleDemo}>
-            Watch Demo 
-          </button>
+                    Explore Products
+                </p>
+                <div className='flex gap-2 text-center w-fit mx-auto lg:mx-0'>
+                    <button className='btn btn-primary'>Explore Products</button>
+                    <button className='flex items-center btn btn-primary btn-outline '>
+                        Watch Demo</button>
+                </div>
+            </div>
+            {/* image div */}
+            <div className='max-w-[600px] mx-auto'>
+                <img src={banner} alt="" />
+            </div>
+
         </div>
-      </div>
-
-      <img src="./assets/banner.png" alt="Hero Image" />
-    </div>
-  );
+    )
 };
 
 export default Hero;
