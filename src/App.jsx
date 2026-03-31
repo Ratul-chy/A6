@@ -7,6 +7,7 @@ import Stats from './components/Stats'
 import Steps from './components/Steps'
 import Footer from './components/Footer'
 import CallToAction from './components/workflow'
+import Pricing from './components/pricing'
 
 function App() {
   
@@ -17,6 +18,7 @@ function App() {
       <Hero />
       <Stats />
       <Steps/>
+      <Pricing />
       <CallToAction />
       <Footer />
       
