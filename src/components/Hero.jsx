@@ -16,7 +16,7 @@ const Hero = () => {
                     Explore Products
                 </p>
                 <div className='flex gap-2 text-center w-fit mx-auto lg:mx-0'>
-                    <button className='bg-purple-600 text-white px-5 py-2 rounded-fullbtn btn-primary'>Explore Products</button>
+                    <button className='bg-purple-600 text-white px-5 py-2 rounded-full'>Explore Products</button>
                     <button className='border px-5 py-2 rounded-full'>
                         Watch Demo</button>
                 </div>
