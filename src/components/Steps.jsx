@@ -2,11 +2,13 @@ import React from 'react';
 
 const Steps = () => {
   return (
-    <div className='space-y-3 p-15'>
-        <div className='text-center'>
+
+    <div className='text-center mb-3'>
             <h1 className='font-bold text-3xl'>Get Started in 3 Steps</h1>
             <p>Start using premium digital tools in minutes, not hours.</p>
-        </div>
+        </div>,
+    <div className='space-y-10 p-15'>
+        
         {/* cards */}
 
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
