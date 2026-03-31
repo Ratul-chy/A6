@@ -5,6 +5,7 @@ import './index.css'
 import Hero from './components/Hero'
 import Stats from './components/Stats'
 import Steps from './components/Steps'
+import Footer from './components/Footer'
 
 function App() {
   
@@ -15,6 +16,8 @@ function App() {
       <Hero />
       <Stats />
       <Steps/>
+      <Footer />
+      
      
     </>
   )

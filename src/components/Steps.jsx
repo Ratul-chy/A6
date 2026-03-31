@@ -2,16 +2,51 @@ import React from 'react';
 
 const Steps = () => {
   return (
-    <div className="px-8 py-12 text-center">
-      <h2 className="text-2xl font-bold">Get Started In 3 Steps</h2>
+    <div className='space-y-3 p-15'>
+        <div className='text-center'>
+            <h1 className='font-bold text-3xl'>Get Started in 3 Steps</h1>
+            <p>Start using premium digital tools in minutes, not hours.</p>
+        </div>
+        {/* cards */}
 
-      <div className="grid md:grid-cols-3 gap-6 mt-8">
-        <div className="p-6 border rounded-xl">Create Account</div>
-        <div className="p-6 border rounded-xl">Choose Products</div>
-        <div className="p-6 border rounded-xl">Start Creating</div>
-      </div>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
+            {/* card */}
+            <div className='border border-gray-400 rounded-2xl p-10 mx-auto min-h-[380px]'>
+                <div className='flex justify-end'>
+                    <span className='text-white bg-linear-to-r from-blue-600 to-purple-500 p-3 rounded-full'>01</span>
+                </div>
+                <div className='text-center p-5'>
+                    
+                    <h1 className='text-2xl font-bold'>Create Account</h1>
+                    <p>Sign up for free in seconds. No credit card required to get started.</p>
+                </div>
+            </div>
+
+            <div className='border border-gray-400 rounded-2xl p-10 mx-auto min-h-[380px]'>
+                <div className='flex justify-end'>
+                    <span className='text-white bg-linear-to-r from-blue-600 to-purple-500 p-3 rounded-full'>02</span>
+                </div>
+                <div className='text-center p-5'>
+                    
+                    <h1 className='text-2xl font-bold'>Choose Products</h1>
+                    <p>Browse our catalog and select the tools that fit your needs.</p>
+                </div>
+            </div>
+            <div className='border border-gray-400 rounded-2xl p-10 mx-auto min-h-[380px]'>
+                <div className='flex justify-end'>
+                    <span className='text-white bg-linear-to-r from-blue-600 to-purple-500 p-3 rounded-full'>03</span>
+                </div>
+                <div className='text-center p-5'>
+                    
+                    <h1 className='text-2xl font-bold'>Start Creating</h1>
+                    <p>Download and start using your premium tools immediately.</p>
+                </div>
+            </div>
+
+        </div>
+     
     </div>
-  );
+  )
 };
 
 export default Steps;
