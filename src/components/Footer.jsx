@@ -1,4 +1,7 @@
 import React from 'react';
+import { FaFacebook } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
    return (
@@ -56,13 +59,14 @@ const Footer = () => {
                             <h3 className='font-semibold text-white'>Social Links</h3>
                             <div className='flex gap-3'>
                                 <div className='bg-white/10 hover:bg-white/20 cursor-pointer w-10 h-10 rounded-full flex items-center justify-center'>
-                                    <i className='fa-brands fa-instagram text-white'></i>
+                                    <FaInstagram />
                                 </div>
                                 <div className='bg-white/10 hover:bg-white/20 cursor-pointer w-10 h-10 rounded-full flex items-center justify-center'>
-                                    <i className='fa-brands fa-facebook-f text-white'></i>
+                                    <FaFacebook />
+                                    
                                 </div>
                                 <div className='bg-white/10 hover:bg-white/20 cursor-pointer w-10 h-10 rounded-full flex items-center justify-center'>
-                                    <i className='fa-brands fa-x-twitter text-white'></i>
+                                    <FaTwitter />
                                 </div>
                             </div>
                         </div>
