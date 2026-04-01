@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 
-const Navbar = ({ cartCount }) => {
+const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
 
     return (
-        <div className='border-b border-[#F2F2F2] py-6'>
+        <div className='bg-[#F4F6FA] border-b border-[#F2F2F2] py-6'>
             <div className='w-10/12 mx-auto flex items-center justify-between'>
 
                 {/* Logo */}
@@ -14,23 +14,16 @@ const Navbar = ({ cartCount }) => {
 
                 {/* Desktop Nav - hidden on mobile */}
                 <ul className='hidden lg:flex gap-8 list-none'>
-                    <li className='cursor-pointer hover:text-[#4F39F6]'>Products</li>
-                    <li className='cursor-pointer hover:text-[#4F39F6]'>Features</li>
-                    <li className='cursor-pointer hover:text-[#4F39F6]'>Pricing</li>
-                    <li className='cursor-pointer hover:text-[#4F39F6]'>Testimonials</li>
-                    <li className='cursor-pointer hover:text-[#4F39F6]'>FAQ</li>
+                    <li className='text-black cursor-pointer hover:text-[#4F39F6]'>Products</li>
+                    <li className='text-black cursor-pointer hover:text-[#4F39F6]'>Features</li>
+                    <li className='text-black cursor-pointer hover:text-[#4F39F6]'>Pricing</li>
+                    <li className='text-black cursor-pointer hover:text-[#4F39F6]'>Testimonials</li>
+                    <li className='text-black cursor-pointer hover:text-[#4F39F6]'>FAQ</li>
                 </ul>
 
                 {/* Right side */}
                 <div className='flex items-center space-x-3'>
 
-                    {/* Cart */}
-                    <div className="indicator">
-                        <span className="indicator-item badge badge-primary">{cartCount}</span>
-                        <button className="btn rounded-full">
-                            <i className="fa-solid fa-cart-shopping"></i>
-                        </button>
-                    </div>
 
                     {/* Login + Get Started - hidden on mobile */}
                     <p className='hidden lg:block cursor-pointer'>Login</p>
