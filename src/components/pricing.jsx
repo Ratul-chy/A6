@@ -2,7 +2,7 @@ import React from 'react';
 
 const Pricing = () => {
     return (
-        <div className='py-30'>
+        <div className='bg-[#F4F6FA] py-30'>
             <div className='w-10/12 mx-auto'>
 
                 {/* Header */}
@@ -15,7 +15,7 @@ const Pricing = () => {
                 <div className='grid grid-cols-1 md:grid-cols-3 gap-6 items-center'>
 
                     {/* Starter */}
-                    <div className='border border-[#F2F2F2] rounded-2xl p-8 space-y-6'>
+                    <div className='border border-[black] rounded-2xl p-8 space-y-6'>
                         <div>
                             <h3 className='text-xl font-bold text-[#101727]'>Starter</h3>
                             <p className='text-[#627382] text-sm'>Perfect for getting started</p>
@@ -63,7 +63,7 @@ const Pricing = () => {
                     </div>
 
                     {/* Enterprise */}
-                    <div className='border border-[#F2F2F2] rounded-2xl p-8 space-y-6'>
+                    <div className='border border-[black] rounded-2xl p-8 space-y-6'>
                         <div>
                             <h3 className='text-xl font-bold text-[#101727]'>Enterprise</h3>
                             <p className='text-[#627382] text-sm'>For teams and businesses</p>

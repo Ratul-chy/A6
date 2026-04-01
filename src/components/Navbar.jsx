@@ -1,33 +1,73 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const Navbar = () => {
+const Navbar = ({ cartCount }) => {
+    const [menuOpen, setMenuOpen] = useState(false);
+
     return (
-    <div className="flex justify-between items-center px-8 py-4 shadow-sm">
-      <h1 className="text-xl font-bold text-purple-600">DigiTools</h1>
+        <div className='border-b border-[#F2F2F2] py-6'>
+            <div className='w-10/12 mx-auto flex items-center justify-between'>
 
-      <div className="hidden md:flex gap-6">
-        <p>Products</p>
-        <p>Features</p>
-        <p>Pricing</p>
-        <p>FAQ</p>
-      </div>
+                {/* Logo */}
+                <h1 className='bg-linear-to-r from-[#4F39F6] to-[#9514FA] bg-clip-text text-transparent font-extrabold text-3xl'>
+                    DigiTools
+                </h1>
 
-      <div className="flex items-center gap-4">
-        <button>Login</button>
+                {/* Desktop Nav - hidden on mobile */}
+                <ul className='hidden lg:flex gap-8 list-none'>
+                    <li className='cursor-pointer hover:text-[#4F39F6]'>Products</li>
+                    <li className='cursor-pointer hover:text-[#4F39F6]'>Features</li>
+                    <li className='cursor-pointer hover:text-[#4F39F6]'>Pricing</li>
+                    <li className='cursor-pointer hover:text-[#4F39F6]'>Testimonials</li>
+                    <li className='cursor-pointer hover:text-[#4F39F6]'>FAQ</li>
+                </ul>
 
-        <button className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-4 py-2 rounded-full">
-          Get Started
-        </button>
+                {/* Right side */}
+                <div className='flex items-center space-x-3'>
 
-        <div className="relative">
-          
-          <span className="absolute -top-2 -right-2 bg-purple-600 text-white text-xs px-2 rounded-full">
-            
-          </span>
+                    {/* Cart */}
+                    <div className="indicator">
+                        <span className="indicator-item badge badge-primary">{cartCount}</span>
+                        <button className="btn rounded-full">
+                            <i className="fa-solid fa-cart-shopping"></i>
+                        </button>
+                    </div>
+
+                    {/* Login + Get Started - hidden on mobile */}
+                    <p className='hidden lg:block cursor-pointer'>Login</p>
+                    <button className='hidden lg:block bg-linear-to-r from-[#4F39F6] to-[#9514FA] px-4 py-3 rounded-full text-white font-semibold'>
+                        Get Started
+                    </button>
+
+                    {/* Hamburger - visible only on mobile */}
+                    <button
+                        className='lg:hidden text-xl'
+                        onClick={() => setMenuOpen(!menuOpen)}
+                    >
+                        <i className={`fa-solid ${menuOpen ? 'fa-xmark' : 'fa-bars'}`}></i> 
+                    </button>
+                </div>
+            </div>
+
+            {/* Mobile Menu - shown when menuOpen is true */}
+            {menuOpen && (
+                <div className='lg:hidden w-10/12 mx-auto pt-4 pb-2 flex flex-col gap-4'>
+                    <ul className='flex flex-col gap-3 list-none'>
+                        <li className='cursor-pointer hover:text-[#4F39F6]'>Products</li>
+                        <li className='cursor-pointer hover:text-[#4F39F6]'>Features</li>
+                        <li className='cursor-pointer hover:text-[#4F39F6]'>Pricing</li>
+                        <li className='cursor-pointer hover:text-[#4F39F6]'>Testimonials</li>
+                        <li className='cursor-pointer hover:text-[#4F39F6]'>FAQ</li>
+                    </ul>
+                    <div className='flex gap-3 items-center'>
+                        <p className='cursor-pointer'>Login</p>
+                        <button className='bg-linear-to-r from-[#4F39F6] to-[#9514FA] px-4 py-2 rounded-full text-white font-semibold'>
+                            Get Started
+                        </button>
+                    </div>
+                </div>
+            )}
         </div>
-      </div>
-    </div>
-  );
+    );
 };
 
 export default Navbar;
